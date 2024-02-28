@@ -1,0 +1,71 @@
+@import url(styles/Header.css);
+@import url(styles/Sections.css);
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Anta", sans-serif;
+  font-weight: 600;
+}
+
+#root{
+  width: 100%;
+  justify-content: center;
+}
+
+html,
+body{
+  width: 100%;
+  background-color: #19191D;
+  font-size: 15px;
+  transition: background-color .2s;
+}
+
+body.light-mode{
+  background-color: #ffffff;
+}
+
+
+body.light-mode:where(a, h2, #download, header h2){
+  color: #FFF !important;
+}
+
+body.light-mode .menu-open .container a:hover{
+  color: #9c0101 !important;
+}
+
+body.light-mode #download{
+  background-color: #19191D;
+}
+
+body.light-mode :where(span, h1, h3, .tag h2){
+  color: #19191D !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    translate: -10vw 0;
+  }
+  to{
+    opacity: 1;
+    tranlate: 0 0 ;
+  }
+}
