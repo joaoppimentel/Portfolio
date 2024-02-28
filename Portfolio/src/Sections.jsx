@@ -108,5 +108,4 @@ function Habilidades() {
             {listaIcons}
         </div>
     </section>
-    
 }
