@@ -107,5 +107,9 @@ function Habilidades() {
         <div className="habilities">
             {listaIcons}
         </div>
+        <p>TESTES</p>
     </section>
+    
+
+
 }
