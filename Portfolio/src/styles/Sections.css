@@ -7,13 +7,18 @@
                   'contato';
 }
 
+.active{
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
 h3{
   font-size: 2.5rem;
   color: #fff;
 }
 
 section{
-  height: 100vh;
+  min-height: 70vh;
   width: 99vw;
   display: flex;
   flex-direction: column;
@@ -21,6 +26,9 @@ section{
   padding: 5rem;
   margin-bottom: 5rem ;
   gap: 2rem;
+  transform: translateX(-20vw);
+  opacity: 0;
+  transition: all .3s;
 }
 
 .me{
@@ -202,19 +210,15 @@ section{
 .habilities {
   width: 70%;
   display: grid;
-  grid-template-columns: repeat(auto-fill,150px);
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-top:3rem ;
-  animation: appear 1s ease-in-out;
-  animation-timeline: view();
-  animation-range-end: cover 30%;
+  margin-top: 3rem;
 }
 
 .tag{
-  width: 150px;
-  height: 180px;
+  height: 12rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,12 +245,4 @@ section{
 .tag:hover > .icon{
   transform: rotateZ(360deg);
 }
-
-
-
-
-
-
-
-
 
