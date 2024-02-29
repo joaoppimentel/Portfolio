@@ -1,23 +1,18 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import Image from './assets/Programmer.png'
-import { 
-    Html5Original, 
-    Css3Original, 
-    SassOriginal,
-    TailwindcssOriginal,
-    JavascriptOriginal,
-    ReactOriginal,
-    CsharpOriginal, 
-    DotnetcoreOriginal,
-    PythonOriginal} from "devicons-react"
+import Image from './assets/Programmer.png';
+import { icons, projects } from './lists.js';
+
 
 export default function Sections() {
-    return (
-        <div className="sections-container">
-            <Sobre />
-            <Habilidades />
-            <Projetos />
-        </div>
+    return (<>
+            <div className="sections-container">
+                <Sobre />
+                <Habilidades />
+                <Projetos />
+            </div>
+            <Modal/>
+        </>
     )
 }
 
@@ -32,7 +27,6 @@ function useScrollRead(className) {
             const position = element.getBoundingClientRect();
             const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-            // Verifica se a metade da div está visível na janela
             if (position.top < windowHeight / 2 && position.bottom >= windowHeight / 2) {
                 setActive(true);
             } else {
@@ -86,44 +80,6 @@ function Habilidades() {
     const [active, setActive] = useState(false);
     const appeared = useScrollRead('.section#habilidades');
 
-    const icons = [
-        {
-            name: 'Html',
-            icon: Html5Original
-        },
-        {
-            name: 'Css',
-            icon: Css3Original
-        },
-        {
-            name: 'Sass',
-            icon: SassOriginal
-        },
-        {
-            name: 'Tailwind CSS',
-            icon: TailwindcssOriginal
-        },
-        {
-            name: 'JavaScript',
-            icon: JavascriptOriginal
-        },
-        {
-            name: 'React',
-            icon: ReactOriginal
-        },
-        {
-            name: 'C#',
-            icon: CsharpOriginal
-        },
-        {
-            name: '.NET',
-            icon: DotnetcoreOriginal
-        },
-        {
-            name: 'Python',
-            icon: PythonOriginal
-        }
-    ];
 
     useEffect(() => {
         setActive(appeared);
@@ -151,10 +107,48 @@ function Habilidades() {
 }
 
 function Projetos(){
+    const appeared = useScrollRead('.section#projects');
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const appeared = useScrollRead('.section#sobre');
+    const handleModalToggle = () => {
+        setIsModalOpen(!isModalOpen);
+    };
 
-    return <section className={`section ${appeared ? 'active' : ''}`} id="sobre">
+    const listaProjects = projects.map((p, i) => {
+        return (
+            <div key={i} className="project" onClick={handleModalToggle}>
+                <img src={p.image} alt={p.title} />
+                <div className="info">
+                    <h2>{p.title}</h2>
+                    <div className="icons">
+                        {Object.values(p.icons).map((Icon, index) => (
+                            <Icon key={index} size={15}/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        );
+    });
 
+    return <section className={`section ${appeared ? 'active' : ''}`} id="projects">
+        <div className="inner">
+            {listaProjects}
+        </div>
     </section>
 }
+
+function Modal(){
+
+
+    return <div className="modal">
+
+    </div>
+}
+
+Modal.propTypes = {
+    project: PropTypes.object.isRequired,
+    onClose: PropTypes.func.isRequired
+};
+
+
+
