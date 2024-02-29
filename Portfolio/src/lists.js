@@ -58,6 +58,7 @@ import Fnaf from './assets/Projects/FNAF.png'
                 Html5Original,
                 Css3Original,
                 JavascriptOriginal
-            }
+            },
+            repositorio: 'https://github.com/JotaPe36043/Fnaf'
         }
     ]

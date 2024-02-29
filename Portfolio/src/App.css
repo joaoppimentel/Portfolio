@@ -22,7 +22,6 @@ body{
   background-color: #19191D;
   font-size: 15px;
   transition: background-color .2s;
-  overflow-x: hidden;
 }
 
 body.light-mode{

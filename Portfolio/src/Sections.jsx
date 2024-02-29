@@ -6,13 +6,12 @@ import { icons, projects } from './lists.js';
 
 export default function Sections() {
     return (<>
-            <div className="sections-container">
-                <Sobre />
-                <Habilidades />
-                <Projetos />
-            </div>
-            <Modal/>
-        </>
+        <div className="sections-container">
+            <Sobre />
+            <Habilidades />
+            <Projetos />
+        </div>
+    </>
     )
 }
 
@@ -66,10 +65,10 @@ function Sobre() {
             <div className="about">
                 <h3>Sobre Mim</h3>
                 <p>
-                    Sou um entusiasta do desenvolvimento de software com foco em interfaces dinâmicas e cativantes.<br/>
-                    Tenho experiência em HTML5, CSS3, JavaScript e React para frontend, e estou explorando Node.js, Python e C# para desenvolvimento backend.<br/>
-                    Sou adepto do Git/GitHub para versionamento de código e colaboração em projetos.<br/>
-                    Estou comprometido em continuar aprendendo e crescendo na área, buscando enfrentar novos desafios e contribuir para soluções inovadoras.<br/>
+                    Sou um entusiasta do desenvolvimento de software com foco em interfaces dinâmicas e cativantes.<br />
+                    Tenho experiência em HTML5, CSS3, JavaScript e React para frontend, e estou explorando Node.js, Python e C# para desenvolvimento backend.<br />
+                    Sou adepto do Git/GitHub para versionamento de código e colaboração em projetos.<br />
+                    Estou comprometido em continuar aprendendo e crescendo na área, buscando enfrentar novos desafios e contribuir para soluções inovadoras.<br />
                 </p>
             </div>
         </section>
@@ -106,23 +105,25 @@ function Habilidades() {
     );
 }
 
-function Projetos(){
+function Projetos() {
     const appeared = useScrollRead('.section#projects');
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProjectKey, setSelectedProjectKey] = useState(0);
 
-    const handleModalToggle = () => {
+    const handleModalToggle = (key) => {
         setIsModalOpen(!isModalOpen);
+        setSelectedProjectKey(key);
     };
 
     const listaProjects = projects.map((p, i) => {
         return (
-            <div key={i} className="project" onClick={handleModalToggle}>
+            <div key={i} className="project" onClick={() => handleModalToggle(i)}>
                 <img src={p.image} alt={p.title} />
                 <div className="info">
                     <h2>{p.title}</h2>
                     <div className="icons">
                         {Object.values(p.icons).map((Icon, index) => (
-                            <Icon key={index} size={15}/>
+                            <Icon key={index} size={15} />
                         ))}
                     </div>
                 </div>
@@ -130,25 +131,36 @@ function Projetos(){
         );
     });
 
-    return <section className={`section ${appeared ? 'active' : ''}`} id="projects">
-        <div className="inner">
-            {listaProjects}
-        </div>
-    </section>
+    return <>
+        <section className={`section ${appeared ? 'active' : ''}`} id="projects">
+            <h3>Projetos</h3>
+            <div className="inner">
+                {listaProjects}
+            </div>
+        </section>
+        <Modal selectedProjectKey={selectedProjectKey}/>
+    </>
 }
 
-function Modal(){
-
+function Modal({selectedProjectKey}) {
+    let project = projects[selectedProjectKey];
 
     return <div className="modal">
-
+        <div className="modal-data">
+            <img src={project.image} alt="" />
+            <div className="modal-links">
+                <a href="#">Acessar Projeto</a>
+                <a href={project.repositorio} target='__blank'>Acessar Repositório</a>
+            </div>
+        </div>
+        <div className="description">
+            <h3>{project.title}</h3>
+        </div>
     </div>
 }
 
 Modal.propTypes = {
-    project: PropTypes.object.isRequired,
-    onClose: PropTypes.func.isRequired
+    selectedProjectKey: PropTypes.number.isRequired
 };
-
 
 
