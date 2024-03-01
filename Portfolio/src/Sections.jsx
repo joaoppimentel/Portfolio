@@ -146,7 +146,9 @@ function Modal({ selectedProjectKey, isModalOpen, handleModalToggle }) {
 
     return <div className="modal" style={{ display: isModalOpen ? 'flex' : 'none' }} >
         <div className="container">
-            <MdClose size={"2rem"} style={{cursor:"pointer"}} color={'#9c0101'} onClick={() => handleModalToggle(selectedProjectKey)} />
+            <button onClick={() => handleModalToggle(selectedProjectKey)}>
+                <MdClose size={"2rem"} color={'#9c0101'} />
+            </button>
             <div className="inner">
                 <div className="modal-data">
                     <img src={project.image} alt="" />

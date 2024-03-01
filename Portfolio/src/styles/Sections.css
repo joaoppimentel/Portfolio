@@ -327,6 +327,23 @@ a:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.modal .container button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 5px;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform .3s;
+}
+
+.modal .container button:hover{
+  transform: scale(1.1);
+}
+
 .modal .inner{
   width: 85vw;
   height: 65vh;
