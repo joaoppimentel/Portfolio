@@ -25,11 +25,11 @@ body{
 }
 
 body.light-mode{
-  background-color: #ffffff;
+  background-color: #FFF;
 }
 
 
-body.light-mode:where(a, h2, #download, header h2){
+body.light-mode :where(a, h2, #download, header h2){
   color: #FFF !important;
 }
 
@@ -43,6 +43,15 @@ body.light-mode #download{
 
 body.light-mode :where(span, h1, h3, .tag h2){
   color: #19191D !important;
+}
+
+body.light-mode .tag{
+  border: 1px solid #19191D !important;
+  border-bottom: 3px solid #9c0101 !important;
+}
+
+body.light-mode :where(.menu-open h2, .description h3){
+  color: #9c0101 !important;
 }
 
 ::-webkit-scrollbar {

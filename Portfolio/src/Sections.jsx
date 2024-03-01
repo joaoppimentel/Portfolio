@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import Image from './assets/Programmer.png';
-import { icons, projects } from './lists.js';
+import { icons, projects, contacts } from './lists.js';
 import { MdClose } from "react-icons/md";
 
 
@@ -11,6 +11,7 @@ export default function Sections() {
             <Sobre />
             <Habilidades />
             <Projetos />
+            <Contatos />
         </div>
     </>
     )
@@ -54,7 +55,7 @@ function Sobre() {
                     <h3>João Pedro</h3>
                     <h3>Desenvolvedor Web</h3>
                     <div className="buttons">
-                        <a id="contact" href="mailto:joaopedroap50@gmail.com">Entrar em Contato</a>
+                        <a id="contact-button" href="mailto:joaopedroap50@gmail.com">Entrar em Contato</a>
                         <a id="download" href="https://drive.google.com/uc?export=download&id=1x4w_mjrV8pOSZkQ8VunW5eUEhFZ9y6T6">Download CV</a>
                     </div>
                 </div>
@@ -77,13 +78,7 @@ function Sobre() {
 }
 
 function Habilidades() {
-    const [active, setActive] = useState(false);
     const appeared = useScrollRead('.section#habilidades');
-
-
-    useEffect(() => {
-        setActive(appeared);
-    }, [appeared]);
 
     const listaIcons = icons.map((t, i) => {
         return (
@@ -97,7 +92,7 @@ function Habilidades() {
     });
 
     return (
-        <section className={`section ${active ? 'active' : ''}`} id="habilidades">
+        <section className={`section ${appeared ? 'active' : ''}`} id="habilidades">
             <h3>Habilidades</h3>
             <div className="habilities">
                 {listaIcons}
@@ -151,7 +146,7 @@ function Modal({ selectedProjectKey, isModalOpen, handleModalToggle }) {
 
     return <div className="modal" style={{ display: isModalOpen ? 'flex' : 'none' }} >
         <div className="container">
-            <MdClose size={"2rem"} color={'#9c0101'} onClick={() => handleModalToggle(selectedProjectKey)}/>
+            <MdClose size={"2rem"} style={{cursor:"pointer"}} color={'#9c0101'} onClick={() => handleModalToggle(selectedProjectKey)} />
             <div className="inner">
                 <div className="modal-data">
                     <img src={project.image} alt="" />
@@ -180,5 +175,28 @@ Modal.propTypes = {
     isModalOpen: PropTypes.bool.isRequired,
     handleModalToggle: PropTypes.func.isRequired
 };
+
+function Contatos() {
+    const appeared = useScrollRead('.section#contact');
+
+    const listaContatos = contacts.map((c, i) => {
+        return (
+            <a key={i} href={c.link} target='__blank' className="contato">
+                <div className="contact-icon">
+                    <c.icon color='#9c0101' size={30} />
+                </div>
+                <h3>{c.name}</h3>
+                <p>{c.content}</p>
+            </a>
+        );
+    });
+
+    return <section className={`section ${appeared ? 'active' : ''}`} id="contact">
+        <h3>Contatos</h3>
+        <div className="inner">
+            {listaContatos}
+        </div>
+    </section>
+}
 
 

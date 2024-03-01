@@ -8,42 +8,40 @@ import {
     CsharpOriginal, 
     DotnetcoreOriginal,
     PythonOriginal,
-    FigmaOriginal} from "devicons-react"
+    FigmaOriginal
+} from "devicons-react"
 
-import Fnaf from './assets/Projects/FNAF.png'
-import HashTaurante from './assets/Projects/HashTaurante.png'
-
-    export const icons = [
-        {
-            name: 'Html',
-            icon: Html5Original
-        },
-        {
-            name: 'Css',
-            icon: Css3Original
-        },
-        {
-            name: 'Sass',
-            icon: SassOriginal
-        },
-        {
-            name: 'Tailwind CSS',
-            icon: TailwindcssOriginal
-        },
-        {
-            name: 'JavaScript',
-            icon: JavascriptOriginal
-        },
-        {
-            name: 'React',
-            icon: ReactOriginal
-        },
-        {
-            name: 'C#',
-            icon: CsharpOriginal
-        },
-        {
-            name: '.NET',
+export const icons = [
+    {
+        name: 'Html',
+        icon: Html5Original
+    },
+    {
+        name: 'Css',
+        icon: Css3Original
+    },
+    {
+        name: 'Sass',
+        icon: SassOriginal
+    },
+    {
+        name: 'Tailwind CSS',
+        icon: TailwindcssOriginal
+    },
+    {
+        name: 'JavaScript',
+        icon: JavascriptOriginal
+    },
+    {
+        name: 'React',
+        icon: ReactOriginal
+    },
+    {
+        name: 'C#',
+        icon: CsharpOriginal
+    },
+    {
+        name: '.NET',
             icon: DotnetcoreOriginal
         },
         {
@@ -56,6 +54,9 @@ import HashTaurante from './assets/Projects/HashTaurante.png'
         }
     ];
 
+    import Fnaf from './assets/Projects/FNAF.png'
+    import HashTaurante from './assets/Projects/HashTaurante.png'
+    
     export const projects = [
         {
             image: Fnaf,
@@ -80,4 +81,35 @@ import HashTaurante from './assets/Projects/HashTaurante.png'
             repositorio: 'https://github.com/JotaPe36043/HashTag-Cardapio-React',
             description: "Página do 'HashTaurante' é um projeto desenvolvido durante um intensivão de JavaScript pela Hashtag Treinamentos no YouTube. Trata-se de uma aplicação web em React que simula uma página de restaurante, onde os usuários podem visualizar e navegar por diferentes categorias de pratos, como principais, sobremesas e bebidas. Utilizando tecnologias como React, HTML5, CSS3 (SCSS) e JavaScript, o projeto também emprega um banco de dados local para armazenar informações dos produtos. Esta iniciativa simples, porém educativa, oferece uma introdução ao desenvolvimento web com React.js e destaca o potencial desta biblioteca para criar interfaces dinâmicas e interativas."
         }
+    ]
+
+    import { BsTelephone } from 'react-icons/bs';
+    import { MdOutlineMail } from "react-icons/md";
+    import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+    
+    export const contacts = [
+        {
+            icon:BsTelephone,
+            name:'Telefone',
+            content: '(43) 9 8486-6730',
+            link:'https://wa.me/5543984866730'
+        },
+        {
+            icon:MdOutlineMail,
+            name:'Email',
+            content: 'joaopedroap50@gmail.com',
+            link:'mailto:joaopedroap50@gmail.com'
+        },
+        {
+            icon:FaGithub,
+            name:'GitHub',
+            content: '@JotaPe36043',
+            link:'https://github.com/JotaPe36043'
+        },
+        {
+            icon:FaLinkedinIn,
+            name:'LinkedIn',
+            content: '@joaoppimentel',
+            link:'https://www.linkedin.com/in/joaoppimentel/'
+        },
     ]
