@@ -41,7 +41,7 @@ h3 {
   padding-bottom: 5rem;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:900px) {
   .me {
     flex-direction: column;
   }
@@ -306,40 +306,65 @@ a:hover {
   padding: 5px;
 }
 
-.modal {
-  width: 80vw;
-  height: 65vh;
+.modal{
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
-  background-color: #09090a;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(9, 9, 10,0.35);
   z-index: 999;
 }
 
-.modal-data{
+.modal .container{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background-color: #09090a;
+  border-radius: 20px;
+  margin-bottom: 10vh;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.modal .inner{
+  width: 85vw;
+  height: 65vh;
+  display: flex;
+  background-color: #09090a;
+  border-radius: 20px;
+}
+
+@media screen and (max-width:900px) {
+  .modal .inner{
+    height: 80vh !important;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+}
+
+.modal-data {
   flex: 1;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 1rem;
 }
 
-.modal-data img{
+.modal-data img {
   width: 90%;
 }
 
-.modal-links{
+.modal-links {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
 
-.modal-links a{
+.modal-links a {
   color: #fff;
   background-color: #9c0101;
   padding: 7px 15px;
@@ -347,6 +372,33 @@ a:hover {
   transition: transform .3s;
 }
 
-.description{
+.description {
+  max-height: 50vh;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.description h3{
+  color: #9c0101;
+}
+
+.description p {
+  max-height: 60%;
+  width: 95%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  overflow: scroll;
+}
+
+.tecnologies{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }

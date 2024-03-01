@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import Image from './assets/Programmer.png';
 import { icons, projects } from './lists.js';
+import { MdClose } from "react-icons/md";
 
 
 export default function Sections() {
@@ -113,6 +114,7 @@ function Projetos() {
     const handleModalToggle = (key) => {
         setIsModalOpen(!isModalOpen);
         setSelectedProjectKey(key);
+        document.body.style.overflow = isModalOpen ? 'auto' : 'hidden';
     };
 
     const listaProjects = projects.map((p, i) => {
@@ -138,29 +140,45 @@ function Projetos() {
                 {listaProjects}
             </div>
         </section>
-        <Modal selectedProjectKey={selectedProjectKey}/>
+        <Modal isModalOpen={isModalOpen} selectedProjectKey={selectedProjectKey} handleModalToggle={handleModalToggle} />
     </>
 }
 
-function Modal({selectedProjectKey}) {
+function Modal({ selectedProjectKey, isModalOpen, handleModalToggle }) {
     let project = projects[selectedProjectKey];
 
-    return <div className="modal">
-        <div className="modal-data">
-            <img src={project.image} alt="" />
-            <div className="modal-links">
-                <a href="#">Acessar Projeto</a>
-                <a href={project.repositorio} target='__blank'>Acessar Repositório</a>
+
+
+    return <div className="modal" style={{ display: isModalOpen ? 'flex' : 'none' }} >
+        <div className="container">
+            <MdClose size={"2rem"} color={'#9c0101'} onClick={() => handleModalToggle(selectedProjectKey)}/>
+            <div className="inner">
+                <div className="modal-data">
+                    <img src={project.image} alt="" />
+                    <div className="modal-links">
+                        <a href="#">Acessar Projeto</a>
+                        <a href={project.repositorio} target='__blank'>Acessar Repositório</a>
+                    </div>
+                </div>
+                <div className="description">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <h3>Tecnologias</h3>
+                    <div className="tecnologies">
+                        {Object.values(project.icons).map((Icon, index) => (
+                            <Icon key={index} size={60} />
+                        ))}
+                    </div>
+                </div>
             </div>
-        </div>
-        <div className="description">
-            <h3>{project.title}</h3>
         </div>
     </div>
 }
 
 Modal.propTypes = {
-    selectedProjectKey: PropTypes.number.isRequired
+    selectedProjectKey: PropTypes.number.isRequired,
+    isModalOpen: PropTypes.bool.isRequired,
+    handleModalToggle: PropTypes.func.isRequired
 };
 
 
