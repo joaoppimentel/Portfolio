@@ -54,8 +54,8 @@ export const icons = [
         }
     ];
 
-    import Fnaf from './assets/Projects/FNAF.png'
-    import HashTaurante from './assets/Projects/HashTaurante.png'
+    import Fnaf from './assets/FNAF.png'
+    import HashTaurante from './assets/HashTaurante.png'
     
     export const projects = [
         {
