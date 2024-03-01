@@ -153,7 +153,7 @@ function Modal({ selectedProjectKey, isModalOpen, handleModalToggle }) {
                 <div className="modal-data">
                     <img src={project.image} alt="" />
                     <div className="modal-links">
-                        <a href="#">Acessar Projeto</a>
+                        <a href={project.link} target='__blank'>Acessar Projeto</a>
                         <a href={project.repositorio} target='__blank'>Acessar Repositório</a>
                     </div>
                 </div>

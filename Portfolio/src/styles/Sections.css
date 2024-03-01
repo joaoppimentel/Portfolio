@@ -207,10 +207,14 @@ a:hover {
   font-weight: 400;
 }
 
+#habilidades{
+  padding: 5rem 0rem;
+}
+
 .habilities {
-  width: 80%;
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7rem, 10rem));
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 10rem));
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
