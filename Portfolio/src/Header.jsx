@@ -51,8 +51,8 @@ function Menu({ isMenuChecked, menuCheckboxChange }) {
                     <ul>
                         <li><a href="#sobre" onClick={menuCheckboxChange}>Sobre</a></li>
                         <li><a href="#habilidades" onClick={menuCheckboxChange}>Habilidades</a></li>
-                        <li><a href="#projetos" onClick={menuCheckboxChange}>Projetos</a></li>
-                        <li><a href="#contato" onClick={menuCheckboxChange}>Contato</a></li>
+                        <li><a href="#projects" onClick={menuCheckboxChange}>Projetos</a></li>
+                        <li><a href="#contact" onClick={menuCheckboxChange}>Contato</a></li>
                     </ul>
                 </nav>
             </div>
