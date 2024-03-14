@@ -1,7 +1,7 @@
 
 # Portfolio
 
-![Minha Foto](Portfolio/src/assets/Projects/Portfolio.png.jpg)
+![Minha Foto](Portfolio/src/assets/Projects/Portfolio.png)
 
 Este é o meu portfólio pessoal, desenvolvido utilizando React.
 
