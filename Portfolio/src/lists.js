@@ -56,6 +56,7 @@ export const icons = [
 
     import Fnaf from './assets/Projects/FNAF.png'
     import HashTaurante from './assets/Projects/HashTaurante.png'
+    import LuSalgados from './assets/Projects/LuSalgados.png'
     
     export const projects = [
         {
@@ -82,6 +83,18 @@ export const icons = [
             repositorio: 'https://github.com/JotaPe36043/HashTag-Cardapio-React',
             link: 'https://hash-tag-cardapio-react.vercel.app/',
             description: "Página do 'HashTaurante' é um projeto desenvolvido durante um intensivão de JavaScript pela Hashtag Treinamentos no YouTube. Trata-se de uma aplicação web em React que simula uma página de restaurante, onde os usuários podem visualizar e navegar por diferentes categorias de pratos, como principais, sobremesas e bebidas. Utilizando tecnologias como React, HTML5, CSS3 (SCSS) e JavaScript, o projeto também emprega um banco de dados local para armazenar informações dos produtos. Esta iniciativa simples, porém educativa, oferece uma introdução ao desenvolvimento web com React.js e destaca o potencial desta biblioteca para criar interfaces dinâmicas e interativas."
+        },
+        {
+            image: LuSalgados,
+            title: 'Projeto Site de Salgados',
+            icons: {
+                Html5Original,
+                Css3Original,
+                JavascriptOriginal
+            },
+            repositorio: 'https://github.com/JotaPe36043/Lu-Salgados',
+            link: 'https://salgados-da-lu.vercel.app/catalogo_produtos.html',
+            description: "Desenvolvi a seção de Produtos de um site para uma empresa de salgados em colaboração com colegas da faculdade. Isso incluiu a criação da barra lateral, exemplos de produtos e garantindo a responsividade para diversos dispositivos. Minha contribuição destacou-se pela criação de layouts atraentes e funcionais, além de assegurar uma experiência consistente em todas as plataformas."
         }
     ]
 
