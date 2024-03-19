@@ -57,6 +57,7 @@ export const icons = [
     import Fnaf from './assets/Projects/FNAF.png'
     import HashTaurante from './assets/Projects/HashTaurante.png'
     import LuSalgados from './assets/Projects/LuSalgados.png'
+    import Pastelaria from './assets/Projects/Pastelaria.png'
     
     export const projects = [
         {
@@ -76,7 +77,6 @@ export const icons = [
             title: 'Cardápio de Restaurante',
             icons: {
                 ReactOriginal,
-                Html5Original,
                 SassOriginal,
                 JavascriptOriginal
             },
@@ -95,6 +95,19 @@ export const icons = [
             repositorio: 'https://github.com/JotaPe36043/Lu-Salgados',
             link: 'https://salgados-da-lu.vercel.app/catalogo_produtos.html',
             description: "Desenvolvi a seção de Produtos de um site para uma empresa de salgados em colaboração com colegas da faculdade. Isso incluiu a criação da barra lateral, exemplos de produtos e garantindo a responsividade para diversos dispositivos. Minha contribuição destacou-se pela criação de layouts atraentes e funcionais, além de assegurar uma experiência consistente em todas as plataformas."
+        },
+        {
+            image: Pastelaria,
+            title: 'Site de Pastelaria em React',
+            icons: {
+                ReactOriginal,
+                TailwindcssOriginal,
+                Css3Original,
+                JavascriptOriginal
+            },
+            repositorio: 'https://github.com/JotaPe36043/Pastelaria',
+            link: 'https://pastelaria-mauve.vercel.app/',
+            description: "Desenvolvi este projeto com paixão e criatividade para oferecer uma experiência digital única para uma pastelaria fictícia. Utilizando a biblioteca React, criei um site dinâmico e envolvente, onde os visitantes podem explorar o cardápio delicioso da pastelaria com apenas alguns cliques. A interface elegante e funcional foi projetada para proporcionar uma jornada gastronômica online, com imagens apetitosas e uma navegação intuitiva. Se você está pronto para uma aventura culinária virtual, não deixe de conferir este projeto incrível!"
         }
     ]
 
