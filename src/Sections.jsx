@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from './assets/Programmer.png';
 import { icons, projects, contacts } from './lists.js';
 import { MdClose } from "react-icons/md";
+import Curriculo from './assets/Curriculo.pdf'
 
 
 export default function Sections() {
@@ -56,7 +57,7 @@ function Sobre() {
                     <h3>Desenvolvedor Web</h3>
                     <div className="buttons">
                         <a id="contact-button" href="mailto:joaopedroap50@gmail.com">Entrar em Contato</a>
-                        <a id="download" href="https://drive.google.com/uc?export=download&id=1x4w_mjrV8pOSZkQ8VunW5eUEhFZ9y6T6">Download CV</a>
+                        <a id="download" href={Curriculo} download>Download CV</a>
                     </div>
                 </div>
                 <div className="image">
@@ -67,10 +68,10 @@ function Sobre() {
             <div className="about">
                 <h3>Sobre Mim</h3>
                 <p>
-                    Sou um entusiasta do desenvolvimento de software com foco em interfaces dinâmicas e cativantes.<br />
-                    Tenho experiência em HTML5, CSS3, JavaScript e React para frontend, e estou explorando Node.js, Python e C# para desenvolvimento backend.<br />
-                    Sou adepto do Git/GitHub para versionamento de código e colaboração em projetos.<br />
-                    Estou comprometido em continuar aprendendo e crescendo na área, buscando enfrentar novos desafios e contribuir para soluções inovadoras.<br />
+                    Desenvolvedor Full Stack com experiência em criar soluções web robustas e escaláveis.
+                    No front-end, utilizo React.js com TypeScript e Sass para desenvolver interfaces modernas e responsivas.
+                    No back-end, trabalho com Zend Framework (PHP) e Node.js (TypeScript), e utilizo MySQL como banco de dados.
+                    Emprego Git e GitLab para controle de versão e colaboração em projetos.
                 </p>
             </div>
         </section>
