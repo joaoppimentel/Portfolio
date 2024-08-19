@@ -4,6 +4,7 @@ import Image from './assets/Programmer.png';
 import { icons, projects, contacts } from './lists.js';
 import { MdClose } from "react-icons/md";
 import Curriculo from './assets/Curriculo.pdf'
+import EnglishCV from './assets/EnglishCV.pdf'
 
 
 export default function Sections() {
@@ -57,7 +58,8 @@ function Sobre() {
                     <h3>Desenvolvedor Web</h3>
                     <div className="buttons">
                         <a id="contact-button" href="mailto:joaopedroap50@gmail.com">Entrar em Contato</a>
-                        <a id="download" href={Curriculo} download>Download CV</a>
+                        <a id="download" href={Curriculo} download>Download CV (Portuguese)</a>
+                        <a id="download" href={EnglishCV} download>Download CV (English)</a>
                     </div>
                 </div>
                 <div className="image">

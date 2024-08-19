@@ -1,13 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/icone.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/icone.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio</title>
+</head>
+
+<body>
+  <div id="google_translate_element" style="position: absolute; z-index: 800; right: 0;"></div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
+    function customizeGoogleTranslate() {
+      setTimeout(() => {
+        const translateElement = document.querySelector('.VIpgJd-ZVi9od-xl07Ob-lTBxed');
+        if (translateElement) {
+          const firstSpan = translateElement.querySelector('span');
+          if (firstSpan) {
+            firstSpan.textContent = 'Choose Language:';
+          }
+        }
+      }, 1000); // Delay para dar tempo do Google Translate carregar
+    }
+
+    // Aguarde o carregamento completo da página antes de personalizar
+    window.addEventListener('load', function () {
+      googleTranslateElementInit();
+      customizeGoogleTranslate();
+    });
+  </script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
 </html>
