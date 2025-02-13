@@ -21,6 +21,8 @@ import {
     GithubOriginal,
     GitlabOriginal,
     JqueryOriginalWordmark,
+    TypescriptOriginal,
+    GitOriginal,
 } from "devicons-react"
 
 export const icons = [
@@ -115,9 +117,9 @@ export const icons = [
 ];
 
 import Fnaf from './assets/Projects/FNAF.png'
-import HashTaurante from './assets/Projects/HashTaurante.png'
 import LuSalgados from './assets/Projects/LuSalgados.png'
 import Pastelaria from './assets/Projects/Pastelaria.png'
+import PettLove from './assets/Projects/PettLove.png'
 
 export const projects = [
     {
@@ -126,23 +128,19 @@ export const projects = [
         icons: {
             Html5Original,
             Css3Original,
-            JavascriptOriginal
+            JavascriptOriginal,
+            GitPlain,
+            GithubOriginal
         },
         repositorio: 'https://github.com/JotaPe36043/Fnaf',
         link: 'https://fnaf-one.vercel.app/',
-        description: "Este projeto consiste em um site dedicado ao filme 'Five Nights at Freddy's', uma adaptação cinematográfica do popular jogo de terror. O site oferece uma sinopse detalhada do filme, uma apresentação dos principais personagens e a incorporação do trailer oficial. Desenvolvido para fornecer informações abrangentes sobre o universo do filme e cativar os fãs da franquia."
-    },
-    {
-        image: HashTaurante,
-        title: 'Cardápio de Restaurante',
-        icons: {
-            ReactOriginal,
-            SassOriginal,
-            JavascriptOriginal
-        },
-        repositorio: 'https://github.com/JotaPe36043/HashTag-Cardapio-React',
-        link: 'https://hash-tag-restaurante.vercel.app/',
-        description: "Página do 'HashTaurante' é um projeto desenvolvido durante um intensivão de JavaScript pela Hashtag Treinamentos no YouTube. Trata-se de uma aplicação web em React que simula uma página de restaurante, onde os usuários podem visualizar e navegar por diferentes categorias de pratos, como principais, sobremesas e bebidas. Utilizando tecnologias como React, HTML5, CSS3 (SCSS) e JavaScript, o projeto também emprega um banco de dados local para armazenar informações dos produtos. Esta iniciativa simples, porém educativa, oferece uma introdução ao desenvolvimento web com React.js e destaca o potencial desta biblioteca para criar interfaces dinâmicas e interativas."
+        description: `Como um de meus primeiros projetos,
+            consiste em um site dedicado ao filme 'Five Nights at Freddy's',
+            uma adaptação cinematográfica do popular jogo de terror.
+            O site oferece uma sinopse detalhada do filme,
+            uma apresentação dos principais personagens e a incorporação do trailer oficial.
+            Desenvolvido para fornecer informações abrangentes sobre o universo do filme e
+            cativar os fãs da franquia.`
     },
     {
         image: LuSalgados,
@@ -150,11 +148,18 @@ export const projects = [
         icons: {
             Html5Original,
             Css3Original,
-            JavascriptOriginal
+            JavascriptOriginal,
+            GitPlain,
+            GithubOriginal
         },
         repositorio: 'https://github.com/JotaPe36043/Lu-Salgados',
         link: 'https://salgados-da-lu.vercel.app/catalogo_produtos.html',
-        description: "Desenvolvi a seção de Produtos de um site para uma empresa de salgados em colaboração com colegas da faculdade. Isso incluiu a criação da barra lateral, exemplos de produtos e garantindo a responsividade para diversos dispositivos. Minha contribuição destacou-se pela criação de layouts atraentes e funcionais, além de assegurar uma experiência consistente em todas as plataformas."
+        description: `Desenvolvi a seção de Produtos de um site para uma 
+            empresa de salgados em colaboração com colegas da faculdade.
+            Isso incluiu a criação da barra lateral, exemplos de produtos
+            e garantindo a responsividade para diversos dispositivos. 
+            Minha contribuição destacou-se pela criação de layouts atraentes
+            e funcionais, além de assegurar uma experiência consistente em todas as plataformas.`
     },
     {
         image: Pastelaria,
@@ -163,11 +168,38 @@ export const projects = [
             ReactOriginal,
             TailwindcssOriginal,
             Css3Original,
-            JavascriptOriginal
+            JavascriptOriginal,
+            GitPlain,
+            GithubOriginal
         },
         repositorio: 'https://github.com/JotaPe36043/Pastelaria',
         link: 'https://pastelaria-mauve.vercel.app/',
-        description: "Desenvolvi este projeto com paixão e criatividade para oferecer uma experiência digital única para uma pastelaria fictícia. Utilizando a biblioteca React, criei um site dinâmico e envolvente, onde os visitantes podem explorar o cardápio delicioso da pastelaria com apenas alguns cliques. A interface elegante e funcional foi projetada para proporcionar uma jornada gastronômica online, com imagens apetitosas e uma navegação intuitiva. Se você está pronto para uma aventura culinária virtual, não deixe de conferir este projeto incrível!"
+        description: `Desenvolvi este projeto com paixão e criatividade
+            para oferecer uma experiência digital única para uma pastelaria fictícia.
+            Utilizando a biblioteca React, criei um site dinâmico e envolvente,
+            onde os visitantes podem explorar o cardápio delicioso da pastelaria com
+            apenas alguns cliques. A interface elegante e funcional foi projetada
+            para proporcionar uma jornada gastronômica online, com imagens apetitosas
+            e uma navegação intuitiva. Se você está pronto para uma aventura culinária virtual,
+            não deixe de conferir este projeto incrível!`
+    },
+    {
+        image: PettLove,
+        title: 'Pett Love',
+        icons: {
+            ReactOriginal,
+            TailwindcssOriginal,
+            TypescriptOriginal,
+            GitPlain,
+            GithubOriginal
+        },
+        repositorio: 'https://github.com/joaoppimentel/PetLove',
+        link: 'https://pet-love-ten.vercel.app/',
+        description: `Pet Love é uma plataforma interativa desenvolvida com React,
+            Tailwind CSS e TypeScript, onde os donos de animais podem visualizar e conectar
+            seus pets com outros. O projeto possui um design responsivo e moderno,
+            destacando os pares de pets de forma dinâmica.
+            O código é versionado com Git e hospedado no GitHub.`
     }
 ]
 
@@ -191,8 +223,8 @@ export const contacts = [
     {
         icon: FaGithub,
         name: 'GitHub',
-        content: '@JotaPe36043',
-        link: 'https://github.com/JotaPe36043'
+        content: '@joaoppimentel',
+        link: 'https://github.com/joaoppimentel/'
     },
     {
         icon: FaLinkedinIn,

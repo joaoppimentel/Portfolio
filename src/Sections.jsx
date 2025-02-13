@@ -71,8 +71,8 @@ function Sobre() {
                 <h3>Sobre Mim</h3>
                 <p>
                     Desenvolvedor Full Stack com experiência em criar soluções web robustas e escaláveis.
-                    No front-end, utilizo React.js com TypeScript e Sass para desenvolver interfaces modernas e responsivas.
-                    No back-end, trabalho com Zend Framework (PHP) e Node.js (TypeScript), e utilizo MySQL como banco de dados.
+                    No front-end, utilizo React.js e Next.js com TypeScript e Scss para desenvolver interfaces modernas e responsivas.
+                    No back-end, trabalho com PHP e Node.js (TypeScript), utilizando MySQL e PostgreSQL como banco de dados.
                     Emprego Git e GitLab para controle de versão e colaboração em projetos.
                 </p>
             </div>
@@ -163,7 +163,7 @@ function Modal({ selectedProjectKey, isModalOpen, handleModalToggle }) {
                 <div className="description">
                     <h3>{project.title}</h3>
                     <p>{project.description}</p>
-                    <h3>Tecnologias</h3>
+                    <h3>Tecnologias Utilizadas</h3>
                     <div className="tecnologies">
                         {Object.values(project.icons).map((Icon, index) => (
                             <Icon key={index} size={60} />
